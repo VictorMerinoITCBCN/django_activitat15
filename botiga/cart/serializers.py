@@ -1,7 +1,7 @@
 from rest_framework import serializers
 from .models import Cart, CartItem
 from user.models import User
-from catalog.serializers import ProductSerializer
+from catalog.serializer import ProductSerializer
 
 class CartItemSerializer(serializers.ModelSerializer):
     product = ProductSerializer(read_only=True)
